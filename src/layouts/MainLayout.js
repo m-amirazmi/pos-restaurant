@@ -47,7 +47,7 @@ export const MainLayout = ({ children }) => {
 
     const renderContent = () => {
         return (
-            <div className={`${styles.main} px-5`}>
+            <div className={`${styles.main}`}>
                 {children}
             </div>
         )

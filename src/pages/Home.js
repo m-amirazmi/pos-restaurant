@@ -1,11 +1,13 @@
 import React from 'react'
 import { MainLayout } from '../layouts/MainLayout'
+import { Row, Col } from 'reactstrap'
 
 export const Home = () => {
+
+
     return (
         <MainLayout>
-            <h1>This is home page</h1>
-
+            this is home page
         </MainLayout>
     )
 }

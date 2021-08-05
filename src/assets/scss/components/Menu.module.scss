@@ -1,0 +1,21 @@
+$border-radius: 1rem;
+$cart-width: 460px;
+
+.cart {
+    width: $cart-width;
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    background: #fff;
+}
+
+.menu {
+    margin-right: $cart-width;
+    padding: 40px;
+    width: 100%;
+
+    .menuHeader {
+        width: 100%;
+        align-items: center;
+    }
+}
