@@ -1,0 +1,95 @@
+$primary: rgba(112, 66, 50, 1);
+$primary-opacity: rgba(112, 66, 50, 0.2);
+$gray:rgba(173, 181, 189, 1);
+$black:#000;
+$sidebarWidth: 120px;
+
+$box-shadow: 0 .5rem 1rem rgba($black, .15);
+$box-shadow-sm: 0 .125rem .25rem rgba($black, .075);
+$box-shadow-lg: 0 1rem 3rem rgba($black, .175);
+$box-shadow-inset: inset 0 1px 2px rgba($black, .075);
+
+$border-radius: 1rem;
+
+.sidebar {
+    position: fixed;
+    height: 100vh;
+    background: #fff;
+    top: 0px;
+    left: 0px;
+    width: $sidebarWidth;
+
+    .brand {
+        background: $primary;
+        padding: 32px;
+        margin-bottom: auto;
+        color: #fff;
+    }
+
+    .links {
+        .link {
+            margin: 12px;
+            padding: 12px;
+            border-radius: $border-radius;
+            cursor: pointer;
+
+            a,
+            i {
+                color: $primary;
+            }
+        }
+
+        .link:hover {
+            background: $primary-opacity;
+            border: 1px $primary solid;
+
+            a,
+            i {
+                color: $primary;
+            }
+        }
+
+        .active {
+            box-shadow: $box-shadow;
+            background: $primary;
+
+            a,
+            i {
+                color: #fff;
+            }
+        }
+    }
+
+    .logout {
+        margin: 0px 12px;
+        margin-top: auto;
+        margin-bottom: 24px;
+        padding: 12px;
+        border-radius: $border-radius;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid $primary;
+
+        p,
+        i {
+            color: $primary;
+        }
+
+        &:hover {
+            box-shadow: $box-shadow;
+            background: $primary;
+
+            p,
+            i {
+                color: #fff;
+            }
+        }
+    }
+
+}
+
+
+
+.main {
+    margin-left: $sidebarWidth;
+}
