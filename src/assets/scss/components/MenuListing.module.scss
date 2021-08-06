@@ -1,0 +1,10 @@
+@import '../variables.scss';
+
+.selected {
+    border: 1px solid $primary !important;
+    background-color: $primary-opacity !important;
+
+    button {
+        display: none;
+    }
+}

@@ -1,0 +1,38 @@
+@import '../variables.scss';
+
+.menu {
+    margin-bottom: 32px;
+    cursor: pointer;
+
+    .image {
+        height: 160px;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .title {
+        h4 {
+            font-weight: bold;
+        }
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+    }
+
+    button {
+        display: none;
+    }
+
+    &:hover {
+        border: 1px solid $primary !important;
+
+        button {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+$primary: rgba(112, 66, 50, 1);
+$primary-opacity: rgba(112, 66, 50, 0.1);
+$gray:rgba(173, 181, 189, 1);
+$black:#000;
+
+$category-width:100% / 7;
+
+$box-shadow: 0 .5rem 1rem rgba($black, .15);
+$box-shadow-sm: 0 .125rem .25rem rgba($black, .075);
+
+.category {
+    display: inline-block !important;
+    width: $category-width;
+    cursor: pointer;
+    color: $primary;
+
+    .categoryCard:hover {
+        border: 1px $primary solid;
+        box-shadow: $box-shadow-sm;
+    }
+
+    .active {
+        background: $primary-opacity;
+        border: 1px $primary solid;
+        box-shadow: $box-shadow-sm;
+        font-weight: bold;
+    }
+
+}
