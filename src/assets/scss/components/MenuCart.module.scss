@@ -59,15 +59,15 @@ $menuHeight: 320px;
     padding-top: 16px;
     padding-bottom: 16px;
     border-radius: $border-radius;
-    border: 1px $primary solid;
+    border: 1px $gray solid;
 
     i,
     span {
-        color: $primary;
+        color: $gray;
     }
 
     i {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     span {
@@ -77,10 +77,30 @@ $menuHeight: 320px;
 
     &:hover {
         border: 1px $primary solid;
+
+        i,
+        span {
+            color: $primary;
+        }
     }
 
 }
 
 .selectedPayment {
     background: $primary-opacity;
+    border: 1px $primary solid;
+
+    i,
+    span {
+        color: $primary;
+    }
+}
+
+.input {
+    background: $primary-opacity;
+
+    &:hover,
+    &:focus {
+        background: $primary-opacity;
+    }
 }
