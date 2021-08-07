@@ -15,7 +15,7 @@ export const MainLayout = ({ children }) => {
             const active = pathname.includes(route.path) && styles.active
 
             return (
-                <div className={`${styles.link} ${active}`}>
+                <div key={route.path} className={`${styles.link} ${active}`}>
                     <Link to={route.path} key={route.path} className="text-center text-decoration-none">
                         <div className="fs-3">
                             {route.icon}

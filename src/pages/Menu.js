@@ -4,6 +4,7 @@ import { MenuCategories } from '../components/MenuCategories'
 import { Input, Row, Col } from 'reactstrap'
 import styles from '../assets/scss/components/Menu.module.scss'
 import { MenuListing } from '../components/MenuListing'
+import { MenuCart } from '../components/MenuCart'
 
 export const Menu = () => {
 
@@ -45,7 +46,7 @@ export const Menu = () => {
     const renderCart = () => {
         return (
             <div className={`${styles.cart}`}>
-                this is the right side cart
+                <MenuCart />
             </div>
         )
     }

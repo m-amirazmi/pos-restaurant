@@ -3,6 +3,7 @@ import { MenuCard } from './MenuCard'
 import { Row } from 'reactstrap'
 import styles from '../assets/scss/components/MenuListing.module.scss'
 import creamy_chicken_rice_casserole from '../assets/images/creamy-chicken-rice-casserole.jpeg'
+import { useCart } from '../contexts/CartContext'
 
 export const MenuListing = (props) => {
 
@@ -16,6 +17,8 @@ export const MenuListing = (props) => {
 
     const [selectedMenuCard, setSelectedMenuCard] = useState()
 
+    const { cart } = useCart()
+
     const renderTitle = () => {
         return (
             <h3 className="text-capitalize mb-3">
@@ -28,9 +31,10 @@ export const MenuListing = (props) => {
         let filtered = menuList
         if (props.selectedCategory.name !== 'all') filtered = menuList.filter((menu) => menu.category.includes(props.selectedCategory.name))
         return filtered.map((menu) => {
-            const selectedStyles = selectedMenuCard?.id === menu.id ? styles.selected : 'border-white'
+            // const selectedStyles = selectedMenuCard?.id === menu.id ? styles.selected : 'border-white'
+            const selectedStyles = cart.find((cartMenu) => cartMenu.id === menu.id) ? styles.selected : 'border-white'
             return (
-                <MenuCard menu={menu} setSelectedMenuCard={setSelectedMenuCard} selectedMenuCard={selectedMenuCard} selectedStyles={selectedStyles} />
+                <MenuCard key={menu.id} menu={menu} setSelectedMenuCard={setSelectedMenuCard} selectedMenuCard={selectedMenuCard} selectedStyles={selectedStyles} />
             )
         })
     }

@@ -1,8 +1,16 @@
 import React from 'react'
 import { Card, Row, Col, InputGroup, Input, Button, InputGroupAddon } from 'reactstrap'
 import styles from '../assets/scss/components/MenuCard.module.scss'
+import { useCart } from '../contexts/CartContext'
 
 export const MenuCard = (props) => {
+
+    const { cart, addToCart } = useCart()
+
+    const handleAddToCart = () => {
+        const menu = { ...props.menu }
+        addToCart(menu)
+    }
 
     const renderMenu = () => {
         return (
@@ -24,7 +32,7 @@ export const MenuCard = (props) => {
                             </div>
                         </Col>
                     </Row>
-                    <Button color="primary" className={`${styles.addButton} px-3 mt-3 w-100`}>
+                    <Button color="primary" className={`${styles.addButton} px-3 mt-3 w-100`} onClick={handleAddToCart}>
                         Add to Cart
                     </Button>
                 </Card>
