@@ -14,7 +14,13 @@ export const CartProvider = ({ children }) => {
         return cart
     }
 
-    const value = { cart, addToCart }
+    const removeFromCart = (menu) => {
+        const filteredOut = cart.filter((m) => m.id !== menu.id)
+        setCart(filteredOut)
+        return filteredOut
+    }
+
+    const value = { cart, addToCart, removeFromCart }
 
     return (
         <CartContext.Provider value={value}>

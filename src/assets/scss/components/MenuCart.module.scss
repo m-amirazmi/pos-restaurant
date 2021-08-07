@@ -1,0 +1,86 @@
+@import '../variables';
+$menuHeight: 320px;
+
+.menu {
+    height: $menuHeight;
+    overflow-y: scroll;
+    // border: $primary solid 1px;
+
+
+    &::-webkit-scrollbar-track {
+        background-color: $primary-opacity;
+        border-radius: $border-radius;
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary;
+        border: 2px solid #555555;
+        border-radius: $border-radius;
+    }
+
+    .item {
+        padding: 4px 12px;
+        font-size: 0.8rem;
+        border-radius: $border-radius;
+        cursor: pointer;
+        border: 1px $danger solid;
+
+
+        i,
+        p {
+            margin: 0;
+        }
+
+        &:hover {
+            background: $danger-opacity;
+            border: 1px $danger solid;
+        }
+    }
+
+}
+
+.price {
+    p {
+        font-weight: bold;
+    }
+}
+
+.tax {
+    color: $gray;
+}
+
+.paymentMethod {
+    cursor: pointer;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: $border-radius;
+    border: 1px $primary solid;
+
+    i,
+    span {
+        color: $primary;
+    }
+
+    i {
+        font-size: 2rem;
+    }
+
+    span {
+        margin-bottom: 0;
+        margin-top: 4px;
+    }
+
+    &:hover {
+        border: 1px $primary solid;
+    }
+
+}
+
+.selectedPayment {
+    background: $primary-opacity;
+}
